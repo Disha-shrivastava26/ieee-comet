@@ -160,9 +160,10 @@ body {
   margin-top: 12px;
 }
 .speakers-grid {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 28px;
+  justify-items: center;
 }
 
 .speaker-card {
@@ -228,4 +229,33 @@ body {
   line-height: 1.5;
   color: #64748b;
   font-style: italic;
+}
+
+/****responsive***/
+@media (max-width: 768px) {
+  .section-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .section-tag {
+    padding-left: 20px;
+  }
+  .left-content h2 {
+    font-size: 40px;
+    line-height: 1.1;
+    padding-left: 20px;
+  }
+
+  .right-content {
+    max-width: 100%;
+    margin-top: 0;
+    padding-left: 20px;
+  }
+
+  .right-content p {
+    text-align: left;
+    font-size: 16px;
+  }
 }
